@@ -59,7 +59,7 @@ a = "mega"
 b = "study"
 c = a + b  # + 문자열 연결 연산자  결과:megastudy
 d = a * 3  # * 문자열 반복 연산자  결과:megamegamega
-f = a[0]  # [] 문자열 인덱싱     결과:m
+e = a[0]  # [] 문자열 인덱싱     결과:m
 f = b[0:3]  # [start:end] 문자열 슬라이싱(end제외) 결과:stu
 g = 'g' in a  # "mega"에서 'g'가 있니? 결과: True or False
 
@@ -71,12 +71,17 @@ g = 'g' in a  # "mega"에서 'g'가 있니? 결과: True or False
 # title1 = "orange,apple,banana"
 # print(title1.split(','))
 
-# user한테
-# 이메일주소
-# 입력받고 -> ['유저아이디,'도메인']
+# user한테 이메일주소 입력받고 -> ['유저아이디,'도메인']
+# ex) sls1599@hanmail.net ['sls1599', 'hanmail.net']
+# user = input("이메일 입력:")
+# a = user.split("@"))  #['sls1599', 'hanmail.net]
+# b = a[1].split('.')      #['hanmial','net']
+# a[1] = b[0]     #['sls1599', 'hanmail']
+# # a[2] = b[1] a[2]가 없으므로 안됨
+# a.append(b[1])
+# print(a) 
 
 
-# print(a)
 
 # join
 # word = ' 'join(['ice','cream']) # 'ice cream'
@@ -84,7 +89,7 @@ g = 'g' in a  # "mega"에서 'g'가 있니? 결과: True or False
 #domain = input("도메인 입력:")
 # print ('@'.join([id,domain])
 
-article = """
+article = """ 
 Acer has announced a lengthy list of new products at CES 2024 in Las Vegas,
 including a 57-inch monitor with curvature designed to increase your field of vision and make you feel more immersed in a game's environment.
 The king-sized Predator Z57 has a Dual UHD resolution — that's 7,680 x 2,160 pixels — a 120Hz refresh rate and a wide 32:9 aspect ratio. 
@@ -94,7 +99,6 @@ can produce highly accurate colors and can maximize light and dark contrast for 
 
 newArticle = article.replace('after','before').replace('it','😊').split()
 print(newArticle)
-
 
 
 
